@@ -4,6 +4,7 @@ In this exercise you will learn how to implement specific demands using Spark AP
 
 ## Explore Data
 
+![image](https://github.com/tangaot/spark-exercises/blob/main/images/Snipaste_2021-06-03_16-03-32.png)
 
 The above graph is a part of the data file, which represents the user behavior data of the e-commerce website, mainly containing four kinds of user behavior: search, click, order, and payment. The data rules are as follows.
 
