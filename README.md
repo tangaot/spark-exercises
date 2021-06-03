@@ -64,10 +64,10 @@ object Spark_HotCategoryTop10 {
     val sparkConf = new SparkConf().setMaster("local[*]").setAppName("HotCategoryTop10")
     val sc = new SparkContext(sparkConf)
 
-    // TODO Read data from file
+    // Read data from file
     val fileData = sc.textFile("input/user_visit_action.txt")
 
-    //TODO Total Click Times for Each Category
+    // Total Click Times for Each Category
     // Filter out non click data
     val clickData= fileData.filter(
       data => {
@@ -85,7 +85,7 @@ object Spark_HotCategoryTop10 {
       }
     ).reduceByKey(_ + _)
 
-    //TODO Total Number of Order for Each Category
+    // Total Number of Order for Each Category
     // Filter out non order data
     val orderData = fileData.filter(
       data => {
@@ -105,7 +105,7 @@ object Spark_HotCategoryTop10 {
     ).reduceByKey(_+_)
 
 
-    //TODO Total Number of Payment
+    // Total Number of Payment
 
     val paymentData = fileData.filter(
       data => {
@@ -124,7 +124,7 @@ object Spark_HotCategoryTop10 {
       }
     ).reduceByKey(_+_)
 
-    //TODO Sorting statistical results
+    // Sorting statistical results
     // Combine three behavior together
     // (Category ID, Click)
     // (Category ID, Order)
@@ -187,7 +187,7 @@ object Spark_HotCategoryTop10_Optimize02 {
 
     val sc = new SparkContext(sparkConf)
 
-    // TODO Read data from file
+    // Read data from file
     val fileData = sc.textFile("input/user_visit_action.txt")
 
     val flatData: RDD[(String, (Int, Int, Int))] = fileData.flatMap (
@@ -215,7 +215,7 @@ object Spark_HotCategoryTop10_Optimize02 {
       }
     )
 
-    //TODO Sorting statistical results
+    // Sorting statistical results
     // Combine three behavior together
     // (Category ID, (1, 0 ,0))
     // (Category ID, (0, 1, 0))
