@@ -103,9 +103,6 @@ object Spark_HotCategoryTop10_Optimize01 {
     val hotTop10 = reducedData.sortBy(_._2,false).take(10)
     hotTop10.foreach(println)
 
-
-
-    //关闭Spark连接
     sc.stop()
   }
 }
