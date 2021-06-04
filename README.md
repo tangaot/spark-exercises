@@ -363,7 +363,7 @@ object Spark_HotCategoryTop10_Accumulator {
 
 ## Requirements 2 :Page Single-Hop Conversion Rate
 
-Calculate the single-hop conversion rate, what is the single-hop conversion rate, for example, a user in a Session process to visit the page path 3,5,7,9,10,21, then page 3 jump to page 5 called a single-hop, 7-9 is also called a single-hop, then the single-hop conversion rate is to count the probability of the page click.
+Calculate the single-hop conversion rate, for example, a user in a Session process to visit the page path 3,5,7,9,10,21, then page 3 jump to page 5 called a single-hop, 7-9 is also called a single-hop, then the single-hop conversion rate is to count the probability of the page click.
 
 For example: to calculate the single-hop conversion rate of 3-5, first get the number of visits (PV) of the eligible Session for page 3 as A, and then get the number of eligible Sessions that visited page 3 and then visited page 5 as B, then B/A is the single-hop conversion rate of pages 3-5.
 
