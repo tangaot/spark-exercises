@@ -367,7 +367,7 @@ Calculate the single-hop conversion rate, what is the single-hop conversion rate
 
 For example: to calculate the single-hop conversion rate of 3-5, first get the number of visits (PV) of the eligible Session for page 3 as A, and then get the number of eligible Sessions that visited page 3 and then visited page 5 as B, then B/A is the single-hop conversion rate of pages 3-5.
 
-![image](https://github.com/tangaot/spark-exercises/blob/main/images/Snipaste_2021-06-03_16-03-32.png)
+![image](https://github.com/tangaot/spark-exercises/blob/main/images/Snipaste_2021-06-04_20-55-24.png)
 
 ### Implmentation
 
