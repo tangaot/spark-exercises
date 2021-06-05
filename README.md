@@ -1,6 +1,6 @@
 # Spark Exercises
 
-In this exercise you will learn how to implement specific demands using Spark API.  These Requirements are real demands for an e-commerce website, so we have to get the data ready before we can implement the functionality.
+In this exercise you will learn how to implement specific requirements using Spark API.  These requirements are real demands for an e-commerce website, so we have to get the data ready before we can implement the functionality.
 
 ## Explore Data
 
