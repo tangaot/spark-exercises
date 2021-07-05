@@ -169,6 +169,8 @@ object Spark_HotCategoryTop10 {
 
 ```
 
+Operations requiring shuffle (exchange in spark plan): join, groupByKey, reduceByKey, partition by, etc. Whenever a shuffle will happen, a new stage start. The data is written in disk in previous step, so the shuffle can read from any node; and can retry in case of failure in shuffle. Shuffle is slow because of Disk I/O, Involves data serialization and deserialization, Network I/O.
+
 In method one, we use reduceBykey() many times, which causes many shuffles and affects performance. Besides, cogroup() will also make spark execute shuffle stage which will take a lot of memory and consume a lot of resources if the data is large.
 
 ### Optimization Ⅰ
